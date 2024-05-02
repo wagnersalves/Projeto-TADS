@@ -1,0 +1,74 @@
+//Requisições do uso da API sem front, usa 3000 definido no express
+POST http://localhost:3000/api/noites/6632c1fc510b4e142b9a055c/pacientes
+Content-Type: application/json
+
+{
+    "data": "2023-04-02",
+    "tempo_uso": 15,
+    "fugas_hora": 5,
+    "pressao_media": 12,
+    "apneias_hora": 0
+}
+
+### //Get ALL
+GET http://localhost:3000/api/noites
+ 
+### //Get com ID
+GET http://localhost:3000/api/noites/663114aed748e1c278ead4d7
+
+### //Delete com ID
+DELETE http://localhost:3000/api/noites/663114aed748e1c278ead4d7
+
+### // Atualização de registro
+PUT http://localhost:3000/api/noites/6631a905b3ce89dfcadccb2f
+Content-Type: application/json
+
+{
+    "data": "2024-04-02",
+    "tempo_uso": 15,
+    "fugas_hora": 5,
+    "pressao_media": 12,
+    "apneias_hora": 0
+}
+
+###
+POST http://localhost:3000/api/pacientes
+Content-Type: application/json
+
+{
+    "nome": "Wagner",
+    "sobrenome": "Alves",
+    "idade": 30,
+    "notes": null
+}
+
+### AQUI COMEÇA TESTE DE PACIENTE
+POST http://localhost:3000/api/pacientes
+Content-Type: application/json
+
+{
+    "nome": "Valerio",
+    "sobrenome": "Valkir",
+    "idade": 30
+}
+
+### //Get ALL
+GET http://localhost:3000/api/pacientes
+ 
+### //Get com ID
+GET http://localhost:3000/api/pacientes/66329e088774e906f3e40b2f
+
+### //Delete com ID
+DELETE http://localhost:3000/api/pacientes/66328697170dc1612d8faa68
+
+### // Atualização de registro
+PUT http://localhost:3000/api/pacientes/66329e088774e906f3e40b2f
+Content-Type: application/json
+
+{
+    "nome": "Rogerio",
+    "sobrenome": "Valkir",
+    "idade": 30,
+    "noites": null
+    
+}
